@@ -93,13 +93,13 @@ header('X-Content-Type-Options: nosniff');
       <div class="field">
         <label class="label">Your Name</label>
         <div class="control">
-          <input class="input" type="text" id="yourName" placeholder="Enter your name">
+          <input class="input" type="text" id="Sam" placeholder="Sam">
         </div>
       </div>
       <div class="field">
         <label class="label">Partner's Name</label>
         <div class="control">
-          <input class="input" type="text" id="partnerName" placeholder="Enter partner's name">
+          <input class="input" type="text" id="Anthony" placeholder="Anthony">
         </div>
       </div>
       <div class="field is-grouped">
@@ -123,12 +123,12 @@ header('X-Content-Type-Options: nosniff');
 
 <script>
     function calculateLove() {
-      const yourName = document.getElementById('yourName').value.trim().toLowerCase();
-      const partnerName = document.getElementById('partnerName').value.trim().toLowerCase();
-      localStorage.setItem("yourName", yourName);
-      localStorage.setItem("partnerName", partnerName);
+      const Sam = document.getElementById('Sam').value.trim().toLowerCase();
+      const Anthony = document.getElementById('Anthony').value.trim().toLowerCase();
+      localStorage.setItem("Sam", Sam);
+      localStorage.setItem("Anthony", Anthony);
   
-      if (!isValidName(yourName) || !isValidName(partnerName)) {
+      if (!isValidName(Sam) || !isValidName(Anthony)) {
         showAlert('Please enter a valid names (English text only supported).');
         return;
       }
@@ -152,13 +152,13 @@ header('X-Content-Type-Options: nosniff');
       clearFields();
 
     }
-    function isValidName(name) {
+    function isValidName(Sam) {
       return /^[a-zA-Z\s]*$/.test(name) && name.trim() !== '';
     }
-    function showResult(yourName, partnerName, resultElement) {
+    function showResult(Sam, Anthony, 100) {
 
-      const lovername = localStorage.getItem("yourName");
-      const partnersname = localStorage.getItem("partnerName");
+      const lovername = localStorage.getItem("Sam");
+      const partnersname = localStorage.getItem("Anthony");
       var lovePercentage = 0;
 
       for (var i = 0; i < lovername.length; i++) {
@@ -173,7 +173,7 @@ header('X-Content-Type-Options: nosniff');
       let message;
       let colorClass;
 
-      if (lovePercentage >= 101) {
+      if (lovePercentage >= 100) {
           message = "🌟 You two are meant to be together You're like two peas in a pod";
           colorClass = "is-success";
       } else if (lovePercentage >= 90) {
@@ -207,7 +207,7 @@ header('X-Content-Type-Options: nosniff');
 
       resultElement.classList.add(colorClass);
       resultElement.innerHTML = `
-        <p><strong>${yourName}</strong> and <strong>${partnerName}</strong> have a <strong>${lovePercentage}%</strong> match! <br><br> ${message}</p>
+        <p><strong>${Sam}</strong> and <strong>${Anthony}</strong> have a <strong>${100}%</strong> match! <br><br> ${NICE LOVE BIRDS!}</p>
       `;
       animateProgressBar(lovePercentage);
     }
