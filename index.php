@@ -39,8 +39,8 @@ function pageurl(){
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" href="data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABqklEQVQ4jZ2Tv0scURDHP7P7SGWh14mkuXJZEH8cgqUWcklAsLBbCEEJSprkD7hD/4BUISHEkMBBiivs5LhCwRQBuWgQji2vT7NeYeF7GxwLd7nl4knMwMDMfL8z876P94TMLt+8D0U0EggQSsAjwMvga8ChJAqxqjTG3m53AQTg4tXHDRH9ABj+zf6oytbEu5d78nvzcyiivx7QXBwy46XOi5z1jbM+Be+nqVfP8yzuD3FM6rzIs9YE1hqGvDf15cVunmdx7w5eYJw1pcGptC9CD4gBUuef5Ujq/BhAlTLIeFYuyfmTZgeYv+2nPt1a371P+Hm1WUPYydKf0lnePwVmh3hnlcO1uc7yvgJUDtdG8oy98kduK2KjeHI0fzCQINSXOk/vlXBUOaihAwnGWd8V5r1uhe1VIK52V6JW2D4FqHZX5lphuwEE7ooyaN7gjLMmKSwYL+pMnV+MA/6+g8RYa2Lg2RBQbj4+rll7uymLy3coiuXb5PdQVf7rKYvojAB8Lf3YUJUHfSYR3XqeLO5JXvk0dhKqSqQQoCO+s5AIxCLa2Lxc6ALcAPwS26XFskWbAAAAAElFTkSuQmCC" />
     
-    <title><?php if ($partner) { echo "Hi $partner"; } else { echo "Hi Partner Name"; } ?></title>
-    <meta name="description" content="<?php if ($partner) { echo "Happy Valentine's Day: $partner"; } else { echo "Happy Valentine's Day: Partner Name"; } ?>"/>
+    <title><?php if ($partner) { echo "Hi $Anthony"; } else { echo "Hi Anthony"; } ?></title>
+    <meta name="description" content="<?php if ($Anthony) { echo "Happy Early Valentine's Day: $Anthony"; } else { echo "Happy Early Valentine's Day Sunflower Baby!"; } ?>"/>
     <?php $current_page = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]"; echo '<link rel="canonical" href="'.$current_page.'" />'; ?>
 
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -264,11 +264,11 @@ input {
 
 <?php
 
-if (preg_match('/^[a-z0-9 .\-]+$/i', $partner)) {
+if (preg_match('/^[a-z0-9 .\-]+$/i', Anthony)) {
 
 $name = "
 
-$partner@❤️:~/💑$
+$Anthony:~/$
 
        ||
    ___\||
